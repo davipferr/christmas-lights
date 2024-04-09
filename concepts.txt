@@ -1,0 +1,76 @@
+
+SYNTAX
+
+@keyframes AnimationName {
+
+}
+
+FEATURED
+
+// de
+from {
+  // value 0 -> original positions
+  transform: translateX(-300px);
+}
+ 
+// para
+To {
+  transform: translateX(0);
+}
+
+- - -
+
+// durante 0% a 100% do tempo de animação
+0%, 100% {
+
+}
+
+// ao chegar em 50% do tempo da animação
+50% {
+
+}
+
+USE
+
+---basic to run
+  animation-name: ;
+  animation-duration: ;
+  0s default -> don't run
+
+---acelleration curv for the animation
+  animation-timing-function: ;
+  ease
+  ease-in
+  ease-out
+  ease-in-out
+  linear
+
+---delay before running
+  animation-delay: ;
+  0s default -> runs on page load
+  
+---How many time the animation will run
+  animation-iteration-count: ;
+  default 1
+  infinite
+
+---Run normally or in reverse
+  animation-direction: ;
+  normall
+  reverse
+
+
+---
+  transform: translateX(-150px);
+
+  animation-fill-mode: ;
+  none -> -150px
+  forwards -> last keyframe (0)
+  backwards -> -150px
+  both
+    -> start on first keyframe -300px
+    -> end on last keyframe 0
+
+---Shorthand
+animation: name duration timing-function delay
+iteration-count direction fill-mode;
